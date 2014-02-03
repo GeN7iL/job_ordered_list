@@ -25,3 +25,18 @@
   end!
 
   SEQUENCE = a, b, c
+
+  4) * Use of 'while' cause it's the only way to change index during a loop :( 
+
+  5) To catch a circular dependency, you must look to the behind :P
+  a => b
+  b => c
+  c => a
+  
+  a, b, c
+  b, a, c
+  c, a, b
+  a, b, c
+  infinite loop :( 
+
+  look behind after continue!

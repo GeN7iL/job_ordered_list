@@ -23,10 +23,10 @@ class Job
     i = 0
     while i < job_array.count do
       if dependent = get_dependent(job_array[i], job_array[i+1..job_array.count])
-        # put dependent on first position
+        raise CircularDependencyError, "Jobs can't have circular dependencies" unless get_dependent(dependent, job_array[i..job_array.index(dependent)]).nil?
         job_array.delete_at(job_array.index(dependent))
         job_array.unshift(dependent)
-        i = -1 # start over
+        i = -1 
       end
       i += 1
     end

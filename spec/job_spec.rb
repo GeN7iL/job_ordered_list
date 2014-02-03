@@ -26,7 +26,11 @@ describe Job do
   context "when giving a simple dependency job list" do
     it "should return a sequence with dependent job after its dependency" do
       job = Job.new("a =>\nb =>c\nc =>")
-      expect(job.ordered).to eq(["c", "a", "b"])
+      expect(job.ordered.to_s).to match /c.*b/
     end
+  end
+
+  context "when giving a self dependency job list" do
+
   end
 end
