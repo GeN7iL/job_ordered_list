@@ -1,0 +1,7 @@
+# Logfile created on 2014-02-02 22:58:03 -0200 by logger.rb/41954
+I, [2014-02-02T22:58:03.324545 #15560]  INFO -- : 0:  diff-lcs (1.2.5) from /Users/fpgentil/.rvm/gems/ruby-2.0.0-p353/specifications/diff-lcs-1.2.5.gemspec
+I, [2014-02-02T22:58:03.325047 #15560]  INFO -- : 0:  rspec-core (2.14.7) from /Users/fpgentil/.rvm/gems/ruby-2.0.0-p353/specifications/rspec-core-2.14.7.gemspec
+I, [2014-02-02T22:58:07.075844 #15560]  INFO -- : 0:  rspec-expectations (2.14.5) from /Users/fpgentil/.rvm/gems/ruby-2.0.0-p353/specifications/rspec-expectations-2.14.5.gemspec
+I, [2014-02-02T22:58:10.286597 #15560]  INFO -- : 0:  rspec-mocks (2.14.5) from /Users/fpgentil/.rvm/gems/ruby-2.0.0-p353/specifications/rspec-mocks-2.14.5.gemspec
+I, [2014-02-02T22:58:10.287107 #15560]  INFO -- : 0:  rspec (2.14.1) from /Users/fpgentil/.rvm/gems/ruby-2.0.0-p353/specifications/rspec-2.14.1.gemspec
+I, [2014-02-02T22:58:10.287428 #15560]  INFO -- : 0:  bundler (1.5.1) from /Users/fpgentil/.rvm/gems/ruby-2.0.0-p353@global/specifications/bundler-1.5.1.gemspec
