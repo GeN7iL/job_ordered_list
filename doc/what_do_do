@@ -2,3 +2,26 @@
 2) Get the first order, it does not depend on the rules yet
   - Check for self dependency
 
+3) Basically the idea is looping through the array of jobs looking for dependency ahead (a, b, c, d)
+  - So look for if a depends on b, c, or d
+  - If not, go the to next node
+  - If it does, put the dependency at position 0 and start over
+
+  a => 
+  b => c
+  c => 
+
+  a, b, c
+  a depends on b or c?
+  no
+  b depends on c?
+  yes!
+  sequence now is c, a, b
+  c depends on a or b?
+  no
+  a depends on b?
+  no
+  b depends on ? (last one)
+  end!
+
+  SEQUENCE = a, b, c
