@@ -20,11 +20,20 @@ class Job
   end
 
   def order(job_array)
-    job_array.each do |job_node|      
+    i = 0
+    while i < job_array.count do
+      if dependent = get_dependent(job_array[i], job_array[i+1..job_array.count])
+        # put dependent on first position
+        job_array.delete_at(job_array.index(dependent))
+        job_array.unshift(dependent)
+        i = -1 # start over
+      end
+      i += 1
     end
     job_array
   end
 
   def get_dependent(job_node, job_array)
+    return @rules.select{|job| job[0] == job_node}.first[1] if job_array.include?(@rules.select{|job| job[0] == job_node}.first[1])
   end
 end
