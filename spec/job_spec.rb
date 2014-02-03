@@ -38,13 +38,13 @@ describe Job do
 
   context "when giving a circular dependency job list" do
     it "should raise an exception" do
-      pending
+      expect { Job.new("a =>b\nb =>c\nc =>a") }.to raise_error Job::CircularDependencyError, "Jobs can't have circular dependencies"    
     end
   end
 
   context "when giving a self dependency job list" do
     it "should raise an exception" do
-      pending
+      expect { Job.new("a =>a") }.to raise_error Job::SelfDependencyError, "Jobs cannot depend on themselves"
     end
   end
 end

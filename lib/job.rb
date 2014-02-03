@@ -9,7 +9,7 @@ class Job
     parse(jobs_input)
     @ordered = order(first_order)
   end
-
+  
   def parse(input)
     @rules = input.scan(/(\w*) => ?(\w*)/)
     raise SelfDependencyError, "Jobs cannot depend on themselves" unless @rules.select{|job, dependency| job == dependency}.empty?
