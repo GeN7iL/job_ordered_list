@@ -1,0 +1,4 @@
+1) First get the rules parsed into an array of arrays
+2) Get the first order, it does not depend on the rules yet
+  - Check for self dependency
+
